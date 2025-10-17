@@ -2,22 +2,34 @@
 import construccion from '../../src/assets/construccion.png';
 import { FaLinkedin } from "react-icons/fa6";
 import { FaSquareInstagram } from "react-icons/fa6";
+import ProductsLists from './ProductsLists';
 ---
-<div>
-	<img src={construccion.src} alt="Construcción" />
-	<div class="socials">
-		<a href="https://www.linkedin.com/company/104602475/admin/dashboard/" target="_blank"><FaLinkedin /></a>
-		<a href="https://www.instagram.com/grupo.bonprix/" target="_blank"><FaSquareInstagram /></a>
+<main>
+	<div class="prueba">
+		<ProductsLists client:load/>
 	</div>
-</div>
+	<div class="construccion">
+		<img src={construccion.src} alt="Construcción" />
+		<div class="socials">
+			<a href="https://www.linkedin.com/company/104602475/admin/dashboard/" target="_blank"><FaLinkedin /></a>
+			<a href="https://www.instagram.com/grupo.bonprix/" target="_blank"><FaSquareInstagram /></a>
+		</div>
+	</div>
+</main>
 
 <style>
-	div {
+	.prueba {
+		background-color: red;
+		height: fit-content;
+		width: 90%;
+	}
+	.construccion {
 		position: relative;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		height: fit-content;
+		display: none;
 	}
 	img {
 		

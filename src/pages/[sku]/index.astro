@@ -1,0 +1,8 @@
+---
+import ProductDetail from "../../components/ProductDetail";
+
+const { sku } = Astro.params;
+---
+<div>
+  <ProductDetail client:load sku={sku} />
+</div>
