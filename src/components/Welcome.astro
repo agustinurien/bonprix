@@ -12,7 +12,7 @@ import { FaSquareInstagram } from "react-icons/fa6";
 		<div class="social-icons">
 			<a href="https://www.linkedin.com/company/104602475/admin/dashboard/" target="_blank"><FaLinkedin /></a>
 			<a href="https://www.instagram.com/grupo.bonprix/" target="_blank"><FaSquareInstagram /></a>
-			<a href="https://wa.me/5491164610799" target="_blank"><FaSquareWhatsapp /></a>
+			<a href="https://wa.me/5491164610799" target="_blank" class="wpp"><FaSquareWhatsapp /></a>
 		</div>
 	</div>
 </div>
@@ -56,13 +56,20 @@ import { FaSquareInstagram } from "react-icons/fa6";
 		display: flex;
 		gap: 10px;
 	}
+	.wpp{
+		color: #00ff48d3;
+		
+	}
 	a {
-		color: rgba(255, 255, 255, 0.726);
+		color: rgba(255, 255, 255, 0.514);
 		text-decoration: none;
 		font-size: 50px;
 	}
 	a :hover {
 		color: #ffffff;
+	}
+	.wpp :hover {
+		color: #00ff48;
 	}
 
 	@media screen and (max-width: 1080px) {
