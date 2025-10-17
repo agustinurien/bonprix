@@ -1,13 +1,18 @@
 ---
 import construccion from '../../src/assets/construccion.png';
-import { FaLinkedin } from "react-icons/fa6";
+import { FaLinkedin, FaSquareWhatsapp } from "react-icons/fa6";
 import { FaSquareInstagram } from "react-icons/fa6";
 ---
 <div>
 	<img src={construccion.src} alt="Construcción" />
+	
 	<div class="socials">
-		<a href="https://www.linkedin.com/company/104602475/admin/dashboard/" target="_blank"><FaLinkedin /></a>
-		<a href="https://www.instagram.com/grupo.bonprix/" target="_blank"><FaSquareInstagram /></a>
+		<h2>Contactate con nosotros</h2>
+		<div class="social-icons">
+			<a href="https://www.linkedin.com/company/104602475/admin/dashboard/" target="_blank"><FaLinkedin /></a>
+			<a href="https://www.instagram.com/grupo.bonprix/" target="_blank"><FaSquareInstagram /></a>
+			<a href="https://wa.me/5491164610799" target="_blank"><FaSquareWhatsapp /></a>
+		</div>
 	</div>
 </div>
 
@@ -37,12 +42,18 @@ import { FaSquareInstagram } from "react-icons/fa6";
 
 		font-family: Arial, sans-serif;
 		font-size: 14px;
-		color: #333;
+		color: #ffffff;
 		
 		display: flex;
+		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		gap: 20px;
+		
+	}
+	.social-icons {
+		
+		display: flex;
+		gap: 10px;
 	}
 	a {
 		color: rgba(255, 255, 255, 0.726);
