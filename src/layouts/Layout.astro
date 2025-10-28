@@ -1,3 +1,7 @@
+---
+import Navbar from "../components/LayoutComponent/Navbar.astro";
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -17,6 +21,7 @@
 		<title>Bonprix</title>
 	</head>
 	<body>
+		<Navbar />
 		<slot />
 	</body>
 </html>
@@ -25,8 +30,14 @@
 	html,
 	body {
 		margin: 0;
-		width: 100%;
-		height: fit-content;
-		background-color: rgba(0, 0, 0, 0.068);
+		
 	}
+
+	@font-face {
+  font-family: "General Sans";
+  src: url("/fonts/GeneralSans-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 </style>

@@ -1,0 +1,120 @@
+---
+import { FaArrowRightLong} from "react-icons/fa6";
+import { IoLocationSharp } from "react-icons/io5";
+
+const sucursales = [
+  {nombre: "RINCÓN DE MILBERG", link: "https://maps.app.goo.gl/C21uZ7YhriW6MYk2A"},
+  {nombre: "MARTÍNEZ", link: "https://maps.app.goo.gl/2kvM57F6QyrjkDk79"},
+  {nombre: "EL TRIÁNGULO (FORD)", link: "https://maps.app.goo.gl/NaC5i9BYAQmWA2YY9"},
+  {nombre: "LA LOMADA (DEL VISO)", link: "https://maps.app.goo.gl/47RsZnreuKANUonR9"},
+  {nombre: "CANNING", link: "https://maps.app.goo.gl/ekv2e8hvdGeAfpzLA"},
+  {nombre: "SAN FERNANDO", link: "https://maps.app.goo.gl/rGZVjgTNtZF5fzQC8"},
+  {nombre: "TIGRE", link: "https://maps.app.goo.gl/i5uu4jcri5UmQWm79"},
+  {nombre: "BENAVÍDEZ", link: "https://maps.app.goo.gl/DsTjCTCd3pjMHqFd9"},
+  {nombre: "CAMAÑO (PILAR)", link: "https://maps.app.goo.gl/ZLBX7jqGH1C5uEsZA"},
+  {nombre: "SARGENTO CABRAL", link: "https://maps.app.goo.gl/ucAkco37hEcXuRvj8"},
+  {nombre: "SAN ISIDRO", link: "https://maps.app.goo.gl/CmY7xjDqKMAvuDrz5"},
+  {nombre: "EL TALAR", link: "https://maps.app.goo.gl/RQHCf66LD5nknF4n8"},
+  {nombre: "BELLA VISTA", link: "https://maps.app.goo.gl/Tcoy7zL5eL6FjS2C6"},
+  {nombre: "PETIÓN (CAÑUELAS)", link: "https://maps.app.goo.gl/GD1oBF4yfaTky5cp8"}
+]
+---
+
+<div class="contenedorPrincipal">
+    <div class="contenedorSucursales">
+
+        <div class="sucursales">
+            <IoLocationSharp size={50} style={{color: "red"}}/>
+            <h2>Sucursales</h2>
+        </div>
+        <ul>
+            {sucursales.map((sucursal) => (
+                <li>
+                    <a href={sucursal.link} target="_blank" rel="noopener noreferrer">
+                        <div class="arrowContainer">
+                            <FaArrowRightLong size={28}/>
+                        </div>
+                        {sucursal.nombre}
+                    </a>
+                </li>
+            ))}
+        </ul>
+    </div>
+</div>
+    
+    <style>
+    .contenedorPrincipal{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 70px;
+    }
+    .contenedorSucursales{
+        width: 80%;
+        height: fit-content;
+        padding: 30px 0px;
+        
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .sucursales {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        
+        padding: 30px;
+        
+    }
+    .sucursales h2{
+        margin: 0px;
+        font-family: "General Sans", sans-serif;
+        font-size: 2.5rem;
+    }
+    ul{
+        
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 0px;
+        padding-left: 40px;
+    }
+    ul li{
+        list-style: none;
+        background-color: red;
+        width: 220px;
+        height: 40px;
+        border-radius: 28px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+
+    }
+    ul li a{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        gap: 10px;
+        padding-left: 4px;
+        color: white;
+        text-decoration: none;
+        font-family: "General Sans", sans-serif;
+        font-size: 15px;
+    }
+    ul li a .arrowContainer{
+        background-color: white;
+        width: 33px;
+        height: 33px;
+        border-radius: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        color: red;
+    }
+    
+</style>

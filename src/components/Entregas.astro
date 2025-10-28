@@ -1,0 +1,223 @@
+---
+import Image from "astro/components/Image.astro";
+import { FaWhatsapp } from "react-icons/fa6";
+import mapa from "../assets/mapa.png";
+import zonaEntrega from "../assets/zonaEntrega.png";
+---
+
+<section>
+    <div class="negro">
+        <div class="zonaEntregaSection">
+            <div class="titulo">
+                <Image src={zonaEntrega} alt="Icono de Zonas de Entrega" class="icono"/>
+                <h2>Zonas de entrega</h2>
+            </div>
+            <div class="entregas">
+                <div class="textoContainer">
+                    <div class="texto">
+                        <p class="texto1">
+                            Realizamos entregas <br>
+                            en toda CABA y en los <br>
+                            principales partidos <br>
+                            del Gran Buenos <br>
+                            Aires.
+                        </p>
+                        <p>
+                            Consultá la <br> disponibilidad en tu <br>
+                            zona y recibí tus <br> productos Bonprix sin <br>
+                            moverte de casa.
+                        </p>
+                    </div>
+                    <a href="" class="consultar">
+                        <div class="wpp">
+                            <FaWhatsapp size={20}/>
+                        </div>
+                        CONSULTAR
+                    </a>
+                </div>
+                <div class="zonas">
+                    <div class="zona">
+                        <h4>Zona Norte</h4>
+                        <ul>
+                            <li>Tigre</li>
+                            <li>San Fernando</li>
+                            <li>San Isidro</li>
+                            <li>Vicente Lopez</li>
+                            <li>Malvinas Argentinas</li>
+                            <li>Jose C. Paz</li>
+                            <li>Pilar</li>
+                            <li>Escobar</li>
+                            <li>San Miguel</li>
+                        </ul>
+                    </div>
+                    <div class="zona">
+
+                        <h4>Zona Oeste</h4>
+                        <ul>
+                            <li>Moreno</li>
+                            <li>Hurlingham</li>
+                            <li>Ituzaingo</li>
+                            <li>Vicente Lopez</li>
+                            <li>Moron</li>
+                            <li>Tres de Febrero</li>
+                            <li>La Matanza</li>
+                            <li>Merlo</li>
+                        </ul>
+                    </div>
+                    <div class="zona">
+
+                        <h4>Zona Sur</h4>
+                        <ul>
+                            <li>Avellaneda</li>
+                            <li>Lanus</li>
+                            <li>Lomas de Zamora</li>
+                            <li>Almirante Brown</li>
+                            <li>Quilmes</li>
+                            <li>Berazategui</li>
+                            <li>Florencio Varela</li>
+                            <li>Presidente Peron</li>
+                            <li>Ezeiza</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="containerMapa">
+        <Image src={mapa} alt="Mapa de Zonas de Entrega" class="mapa"/>
+    </div>
+</section>
+
+<style>
+    section{
+        background-color: rgba(0, 0, 0, 0.9);
+        width: 100%;
+        height: 500px;
+        display: flex;
+        margin-bottom: 70px;
+    }
+    .negro{
+        width: 57%;
+        
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+    }
+    .zonaEntregaSection{
+        
+        width: 80%;
+        height: 100%;
+    }
+    .titulo{
+        display: flex;
+        align-items: flex-end;
+        padding-top: 50px;
+        padding-bottom: 20px;
+    }
+    .titulo h2{
+        margin: 0px;
+        padding-left: 20px;
+        font-family: "General Sans", sans-serif;
+        font-size: 3rem;
+        color: white;
+    }
+    .titulo .icono{
+        width: 70px;
+        height: auto;
+    }
+    
+    .entregas{
+        display: flex;
+        height: fit-content;
+        gap: 20px;
+
+    }
+    .textoContainer{
+        width: 33%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+
+    }
+    .texto{
+        width: 60%;
+        
+    }
+    .texto .texto1{
+        font-size: 0.72rem;
+        color: rgb(255, 255, 255);
+        font-family: "General Sans", sans-serif;
+        font-weight: 500;
+        margin-top: 0px;
+    }
+    .texto p{
+        font-size: 0.72rem;
+        color: rgba(255, 255, 255, 0.771);
+        font-family: "General Sans", sans-serif;
+    }
+    .consultar{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        background-color: red;
+        width: 95%;
+        height: 40px;
+        gap: 20px;
+        border-radius: 20px;
+        box-sizing: border-box;
+        padding-left: 5px;
+        color: white;
+        text-decoration: none;
+        font-family: "General Sans", sans-serif;
+    }
+    .consultar .wpp{
+        background-color: white;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+        color: red;
+    }
+    .zonas{
+        width: 67%;
+        display: flex;
+        gap: 30px;
+    }
+    .zona{
+        font-family: "General Sans", sans-serif;
+        font-size: 0.75rem;
+        color: white;
+    }
+    .zona h4{
+        margin: 0px;
+    }
+    .zona ul{
+        padding: 0px;
+        margin: 0px;
+    }
+    .zona ul li{
+        list-style: none;
+        color: rgb(205, 205, 205);
+        padding-top: 10px;
+        font-family: "General Sans", sans-serif;
+        font-size: 0.8rem;
+    }
+    .containerMapa{
+        background-color: lightgray;
+        width: 43%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+    .mapa{
+        height: 200%;
+        width: 200%;
+        object-fit: cover;
+    }
+</style>
