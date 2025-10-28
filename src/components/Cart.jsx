@@ -1,10 +1,24 @@
 import React from "react";
 import { useCartStore } from "../store/useCartStore";
 import { handleCheckout } from "../utils/checkout";
+import { auth } from "../firebase/config";
 
 const Cart = () => {
   const { cart, removeFromCart, clearCart, updateQuantity, total } =
     useCartStore();
+
+  const handleCheckoutClick = () => {
+    const user = auth.currentUser;
+
+    if (!user) {
+      alert("Debes iniciar sesión para finalizar la compra 🧾");
+      return;
+    }
+
+    // Si está logueado, procede con el checkout
+    handleCheckout();
+  };
+
   return (
     <div>
       <h2>Shopping Cart</h2>
@@ -50,7 +64,7 @@ const Cart = () => {
 
             <div className="mt-4 font-bold">Total: ${total()}</div>
 
-            <button onClick={handleCheckout} style={{ marginTop: 20 }}>
+            <button onClick={handleCheckoutClick} style={{ marginTop: 20 }}>
               Finalizar Compra
             </button>
 
