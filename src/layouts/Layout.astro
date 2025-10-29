@@ -4,40 +4,39 @@ import Navbar from "../components/LayoutComponent/Navbar.astro";
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
 
-  		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
-  		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
 
-		<link rel="apple-touch-icon" sizes="180x180" href="/favicon-32x32.png" />
-		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000" />
-		<meta name="generator" content={Astro.generator} />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon-32x32.png" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000" />
+    <meta name="generator" content={Astro.generator} />
 
-    	<meta name="theme-color" content="#000000" />
-		<title>Bonprix</title>
-	</head>
-	<body>
-		<Navbar />
-		<slot />
-	</body>
+    <meta name="theme-color" content="#000000" />
+    <title>Bonprix</title>
+  </head>
+  <body>
+    <Navbar />
+    <slot />
+  </body>
 </html>
 
 <style>
-	html,
-	body {
-		margin: 0;
-		
-	}
+  html,
+  body {
+    margin: 0;
+  }
 
-	@font-face {
-  font-family: "General Sans";
-  src: url("/fonts/GeneralSans-Regular.otf") format("opentype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
+  @font-face {
+    font-family: "General Sans";
+    src: url("/fonts/GeneralSans-Regular.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
 </style>

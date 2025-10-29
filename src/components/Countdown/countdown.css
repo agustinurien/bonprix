@@ -1,0 +1,20 @@
+.countdownContainer {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.countdown {
+  background-color: rgba(255, 0, 0, 0.8);
+  color: white;
+  padding: 7px 15px;
+
+  font-family: "General Sans", sans-serif;
+  font-weight: 500;
+  display: flex;
+  gap: 7px;
+  font-size: 1.2rem;
+}
