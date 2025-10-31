@@ -12,10 +12,10 @@ const NavHamburguesa = () => {
       </button>
       {open && (
         <div className="linksHamburguesa">
-          <a href="/">SUCURSALES</a>
-          <a href="/products">ZONAS DE ENTREGA</a>
-          <a href="/about">NOSOTROS</a>
-          <a href="/about">CONTACTO</a>
+          <a href="#Sucursales">SUCURSALES</a>
+          <a href="#Entregas">ZONAS DE ENTREGA</a>
+          <a href="#QuienesSomos">NOSOTROS</a>
+          <a href="#contacto">CONTACTO</a>
         </div>
       )}
     </>

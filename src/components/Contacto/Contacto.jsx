@@ -12,7 +12,7 @@ const Contacto = () => {
       user_number: form.number.value,
       user_email: form.email.value,
       message: form.message.value,
-      to_email: "agus.urien2@gmail.com",
+      to_email: "Delivery@grupobonprix.com.ar",
       reply_to: form.email.value,
     };
 

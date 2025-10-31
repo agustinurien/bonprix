@@ -6,6 +6,7 @@
   top: 10px;
   left: 50%;
   transform: translateX(-50%);
+  display: none;
 }
 .countdown {
   background-color: rgba(255, 0, 0, 0.8);

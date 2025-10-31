@@ -3,7 +3,7 @@ import Image from "astro/components/Image.astro";
 import local from "../assets/local.jpg";
 ---
 
-<section class="quienesSomos">
+<section class="quienesSomos" id="QuienesSomos">
   <div class="contenedorContenido">
     <div class="contenedorImagen">
       <Image src={local} alt="Imagen Quienes Somos" class="imagen" />
@@ -30,6 +30,7 @@ import local from "../assets/local.jpg";
     justify-content: center;
     align-items: center;
     margin-bottom: 80px;
+    scroll-margin-top: 70px;
   }
   .contenedorContenido {
     display: flex;
