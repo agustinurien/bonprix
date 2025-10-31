@@ -2,9 +2,13 @@
 import Image from "astro/components/Image.astro";
 import logo from "../../assets/logo.png";
 import Countdown from "../Countdown/Countdown";
+import NavHamburguesa from "../Hamburguesa/NavHamburguesa";
 ---
 
 <nav>
+  <div class="navHamburguesa">
+    <NavHamburguesa client:load />
+  </div>
   <Countdown client:load />
   <a href="/" class="logoLink">
     <div class="contenedorLogo">
@@ -20,6 +24,9 @@ import Countdown from "../Countdown/Countdown";
 </nav>
 
 <style>
+  .navHamburguesa {
+    display: none;
+  }
   nav {
     position: sticky;
     top: 0;
@@ -74,5 +81,51 @@ import Countdown from "../Countdown/Countdown";
     width: auto;
     height: 100%;
     object-fit: contain;
+  }
+
+  @media screen and (max-width: 650px) {
+    nav .logoLink {
+      width: fit-content;
+      height: 100%;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    nav .logoLink .contenedorLogo {
+      width: fit-content;
+      height: 30%;
+    }
+    nav .logoLink .contenedorLogo .logo {
+      width: auto;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    nav {
+      padding: 0px 15px;
+    }
+    nav .links {
+      display: flex;
+      gap: 10px;
+    }
+    nav .links a {
+      font-size: 0.6rem;
+      margin: 0px;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    nav {
+    }
+    nav .links {
+      display: none;
+    }
+    .navHamburguesa {
+      position: absolute;
+      display: block;
+      top: 0;
+      right: 0;
+    }
   }
 </style>

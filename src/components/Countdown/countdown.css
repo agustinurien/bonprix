@@ -18,3 +18,14 @@
   gap: 7px;
   font-size: 1.2rem;
 }
+
+@media screen and (max-width: 1155px) {
+  .countdownContainer {
+    top: 60px;
+  }
+  .countdown {
+    width: 100%;
+    padding: 2px 15px;
+    font-size: 0.8rem;
+  }
+}

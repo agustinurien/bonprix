@@ -1,0 +1,424 @@
+---
+import { IoLogoWhatsapp } from "react-icons/io5";
+import bonprix from "../../assets/bonprix.png";
+import tapeLogo from "../../assets/tapeLogo.png";
+
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaWhatsapp,
+} from "react-icons/fa";
+import Image from "astro/components/Image.astro";
+import { FaTiktok } from "react-icons/fa6";
+---
+
+<footer>
+  <div class="blackSection">
+    <div class="explore">
+      <h3>Seguí explorando...</h3>
+    </div>
+    <div class="blackSectionText">
+      <ul>
+        <li><a href="/#Servicios">Inicio</a></li>
+        <li><a href="/portfolio/Portfolio">Zonas de entrega</a></li>
+        <li><a href="/#QuienesSomos">Nosotros</a></li>
+        <li><a href="/#Valores">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="socialsContainer">
+    <div class="socials">
+      <a href="https://www.instagram.com/tape.agencia/" target="_blank"
+        ><FaInstagram /></a
+      >
+      <a href="https://www.linkedin.com/company/tape-agencia/" target="_blank">
+        <FaFacebookF />
+      </a>
+      <a href="https://www.facebook.com/tape.agencia" target="_blank"
+        ><FaLinkedinIn />
+      </a>
+      <a href="/" target="_blank"><FaTiktok /> </a>
+      <p>Seguinos</p>
+    </div>
+    <div class="copy">
+      <div class="contactar">
+        <p>Contactar</p>
+        <a href="https://wa.me/5491139169654" target="_blank"><FaWhatsapp /></a>
+        <p class="numero">+54 9 11 6461- 0799</p>
+      </div>
+
+      <div class="copyText">
+        <p>© 2025 Grupo Bonprix.</p>
+        <div class="copyTextImg">
+          <Image src={bonprix} alt="bonprixLogo" class="imgBonprix" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="socialsContainer2">
+    <div class="designedBy">
+      <p>Designed & developed by <strong> TAPE Producciones </strong></p>
+      <div class="containerTape">
+        <Image src={tapeLogo} alt="tapeLogo" class="imgTape" />
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .blackSection {
+    margin-top: 70px;
+
+    padding: 80px 0px;
+    background-color: #171b23;
+    width: 100%;
+    height: 400px;
+    display: flex;
+  }
+  .explore {
+    width: 30%;
+    height: 200px;
+  }
+  .explore h3 {
+    padding-left: 70px;
+    color: #fff9ea;
+    margin: 0px;
+    font-family: "General Sans", sans-serif;
+  }
+  .blackSectionText ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+  }
+  .blackSectionText ul li {
+    font-size: 2.8rem;
+    list-style: none;
+    font-family: "General Sans", sans-serif;
+
+    color: #fff9ea;
+  }
+  .blackSectionText ul li a {
+    position: relative;
+    color: #fff9ea;
+    text-decoration: none;
+  }
+  .blackSectionText ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 0px;
+    height: 3px;
+    background-color: #fff9ea; /* usa el color del texto */
+    transition: width 0.3s ease-in-out;
+  }
+
+  .blackSectionText ul li a:hover::after {
+    width: 100%;
+  }
+  .socialsContainer {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    height: 200px;
+    background-color: #171b23;
+    padding-top: 80px;
+  }
+  .socialsContainer::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    height: 1px;
+    background-color: #fff9ea;
+  }
+
+  .socials {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 45%;
+    height: 100px;
+
+    padding-left: 60px;
+    gap: 10px;
+    box-sizing: border-box;
+  }
+  .socials p {
+    font-family: "General Sans", sans-serif;
+    font-size: 1rem;
+    color: #fff9ea9e;
+
+    margin: 0px;
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+  .socials a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff9ea;
+    border-radius: 100%;
+    width: 35px;
+    height: 35px;
+    color: #000000;
+    margin: 0px;
+    font-size: 1.4rem;
+    transition: transform 0.2s ease;
+  }
+  .socials a:hover {
+    transform: scale(1.2);
+  }
+  .copy {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-color: #171b23;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+  }
+  .contactar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100px;
+
+    padding-top: 10px;
+    gap: 20px;
+    box-sizing: border-box;
+  }
+  .contactar a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff9ea;
+    width: 32px;
+    height: 32px;
+    background-color: #171b23;
+    border-radius: 100%;
+    border: 2px solid #fff9ea;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+  }
+  .contactar a:hover {
+    background-color: #ffffff;
+    color: #000000;
+  }
+  .contactar p {
+    font-size: 1.2rem;
+    color: #fff9ea;
+    margin: 0px;
+    font-family: "General Sans", sans-serif;
+    font-weight: 700;
+  }
+  .contactar .numero {
+    font-size: 0.9rem;
+    color: #fff9ea9f;
+    margin: 0px;
+    font-weight: 500;
+  }
+  .copyText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100px;
+    color: #fff9eaae;
+    font-family: "General Sans", sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  .copyTextImg {
+    padding-left: 50px;
+    height: 40%;
+    width: 40%;
+  }
+  .imgBonprix {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .socialsContainer2 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 200px;
+    background-color: #171b23;
+  }
+  .socialsContainer2::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    height: 1px;
+    background-color: #fff9ea;
+  }
+  .designedBy {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: #fff9eaae;
+    font-family: "General Sans", sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  .designedBy strong {
+    color: #fff9ea;
+    font-size: 1rem;
+    font-weight: 700;
+  }
+  .containerTape {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+  }
+  .containerTape .imgTape {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  @media screen and (max-width: 1250px) {
+    .blackSection {
+      flex-direction: column;
+      height: fit-content;
+      padding: 50px 0px;
+    }
+    .explore {
+      width: 100%;
+      text-align: center;
+      height: fit-content;
+      padding-bottom: 30px;
+    }
+    .explore h3 {
+      padding: 0px;
+    }
+    .blackSectionText ul {
+      box-sizing: border-box;
+    }
+    .blackSectionText ul li {
+      font-size: 1.5rem;
+    }
+    .socialsContainer {
+      flex-direction: column;
+      align-items: center;
+      height: fit-content;
+    }
+    .socials {
+      width: 100%;
+      justify-content: flex-start;
+
+      padding-left: 40px;
+      gap: 20px;
+    }
+    .socials p {
+      padding-left: 0px;
+      margin: 0px;
+    }
+    .copy {
+      padding-left: 40px;
+      padding-bottom: 40px;
+    }
+
+    .copyText {
+      flex-direction: column-reverse;
+      align-items: center;
+      width: fit-content;
+      padding-right: 20px;
+    }
+    .copyText p {
+      font-size: 0.7rem;
+    }
+    .copyTextImg {
+      padding: 0px;
+    }
+  }
+  @media screen and (max-width: 780px) {
+    .blackSection {
+      flex-direction: column;
+      height: fit-content;
+      padding: 50px 0px;
+    }
+    .explore {
+      width: 100%;
+      text-align: center;
+      height: fit-content;
+      padding-bottom: 30px;
+    }
+    .explore h3 {
+      padding: 0px;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    .blackSectionText ul {
+      padding-left: 15px;
+    }
+    .blackSection {
+      padding: 30px 0px;
+    }
+    .explore {
+      text-align: left;
+    }
+    .explore h3 {
+      font-size: 0.8rem;
+      padding-left: 15px;
+    }
+    .copy {
+      padding-left: 15px;
+      flex-direction: column;
+      align-items: center;
+    }
+    .copyText {
+      width: 100%;
+
+      box-sizing: border-box;
+    }
+    .socialsContainer {
+      padding: 0px 0px;
+    }
+    .socials {
+      flex-direction: row-reverse;
+      padding-left: 15px;
+      justify-content: flex-end;
+    }
+    .contactar {
+      width: 100%;
+    }
+    .contactar a {
+      width: 30px;
+      height: 30px;
+      font-size: 20px;
+    }
+    .designedBy p {
+      font-size: 0.7rem;
+    }
+    .designedBy strong {
+      font-size: 0.7rem;
+    }
+  }
+</style>

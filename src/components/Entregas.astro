@@ -92,7 +92,7 @@ import zonaEntrega from "../assets/zonaEntrega.png";
 
 <style>
   section {
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: #171b23;
     width: 100%;
     height: 500px;
     display: flex;
@@ -216,5 +216,149 @@ import zonaEntrega from "../assets/zonaEntrega.png";
     height: 200%;
     width: 200%;
     object-fit: cover;
+  }
+  @media screen and (max-width: 1450px) {
+    .negro {
+      align-items: flex-start;
+      padding: 0px 20px;
+    }
+    .titulo {
+      padding: 30px 0px;
+    }
+    .titulo h2 {
+      padding-left: 35px;
+    }
+    .textoContainer {
+      width: 25%;
+    }
+    .textoContainer .texto {
+      width: 100%;
+    }
+    .consultar {
+      width: 100%;
+      font-size: 0.8rem;
+      gap: 10px;
+    }
+    .zonaEntregaSection {
+      width: 100%;
+    }
+    .entregas {
+      justify-content: space-between;
+    }
+  }
+  @media screen and (max-width: 1050px) {
+    .negro {
+      align-items: flex-start;
+      padding: 0px 20px;
+    }
+    .titulo {
+      padding: 20px 0px;
+    }
+    .titulo h2 {
+      font-size: 2rem;
+    }
+    .textoContainer {
+      width: 100%;
+    }
+    .entregas {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      gap: 40px;
+    }
+    .textoContainer {
+      align-items: flex-start;
+    }
+    .textoContainer .texto {
+      width: 80%;
+    }
+    .texto br {
+      display: none;
+    }
+    .zonas {
+      width: 100%;
+    }
+    .zonas .zona li {
+      padding-top: 3px;
+    }
+    .consultar {
+      width: 80%;
+    }
+  }
+  @media screen and (max-width: 1050px) {
+    .negro {
+      align-items: flex-start;
+      padding: 0px 20px;
+    }
+    .titulo {
+      padding: 20px 0px;
+    }
+    .titulo h2 {
+      font-size: 2rem;
+    }
+    .textoContainer {
+      width: 100%;
+    }
+    .entregas {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      gap: 40px;
+    }
+    .textoContainer {
+      align-items: flex-start;
+    }
+    .textoContainer .texto {
+      width: 80%;
+    }
+    .texto br {
+      display: none;
+    }
+    .zonas {
+      width: 100%;
+    }
+    .zonas .zona li {
+      padding-top: 3px;
+    }
+    .consultar {
+      width: 80%;
+    }
+  }
+  @media screen and (max-width: 750px) {
+    section {
+      flex-direction: column;
+      height: fit-content;
+    }
+    .negro {
+      width: 100%;
+      box-sizing: border-box;
+      margin-bottom: 25px;
+    }
+    .titulo {
+      padding-bottom: 25px;
+    }
+
+    .titulo h2 {
+      font-size: 1.7rem;
+      padding-left: 15px;
+    }
+    .titulo .icono {
+      width: 45px;
+    }
+    .zonas {
+      justify-content: flex-start;
+      gap: 45px;
+    }
+    .containerMapa {
+      width: 100%;
+      height: 300px;
+    }
+    .consultar {
+      width: 60%;
+      height: 30px;
+      padding-left: 3px;
+    }
+    .consultar .wpp {
+      width: 25px;
+      height: 25px;
+    }
   }
 </style>

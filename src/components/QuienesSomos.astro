@@ -76,4 +76,60 @@ import local from "../assets/local.jpg";
     line-height: 1.1;
     width: 80%;
   }
+  @media screen and (max-width: 1150px) {
+    .containerCreemos {
+      align-items: flex-start;
+    }
+    .containerCreemos .texto {
+      width: 100%;
+    }
+  }
+  @media screen and (max-width: 750px) {
+    .quienesSomos {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    .contenedorImagen {
+      height: 450px;
+    }
+    .contenedorContenido {
+      width: 90%;
+      gap: 20px;
+      padding-bottom: 0px;
+      padding-top: 20px;
+      height: fit-content;
+    }
+    .contenedorContenido .texto {
+      padding: 0px;
+    }
+    .contenedorContenido .texto h2 {
+      font-size: 1.5rem;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    .contenedorContenido {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+    .containerCreemos {
+      width: 100%;
+      align-items: center;
+    }
+    .contenedorContenido .texto {
+      width: 100%;
+
+      text-align: center;
+    }
+    .contenedorContenido .texto p {
+      width: 100%;
+    }
+
+    .contenedorImagen {
+      width: 100%;
+      height: 300px;
+    }
+    .contenedorImagen .imagen {
+      object-position: top center;
+    }
+  }
 </style>

@@ -1,70 +1,106 @@
 ---
 import Image from "astro/components/Image.astro";
-import heroImage from "../assets/HeroImage.png"
-import bebidas from "../assets/bebidas.png"
+import heroImage from "../assets/HeroImage.png";
+import bebidas from "../assets/bebidas.png";
 import { IoIosArrowDown } from "react-icons/io";
-
 ---
+
 <div class="contenedorImagenHero">
-	<Image src={heroImage} alt="Hero Image" class="imagenHero" />
-	<div class="confianza">
-		<h3>TODO LO QUE <br>
-			BUSCÁS, CON LA <br>
-			CONFIANZA DE <br>
-			SIEMPRE.
-		</h3>
-		<IoIosArrowDown size={30}/>
-	</div>
-	<div class="bebidas">
-		<Image src={bebidas} alt="Bebidas" class="bebidas" />
-	</div>
+  <Image src={heroImage} alt="Hero Image" class="imagenHero" />
+  <div class="confianza">
+    <h3>
+      TODO LO QUE <br />
+      BUSCÁS, CON LA <br />
+      CONFIANZA DE <br />
+      SIEMPRE.
+    </h3>
+    <div class="arrow">
+      <IoIosArrowDown />
+    </div>
+  </div>
+  <div class="bebidas">
+    <Image src={bebidas} alt="Bebidas" class="bebidas" />
+  </div>
 </div>
 
 <style>
-.contenedorImagenHero {
-	position: relative;
-	height: 100%;
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: flex-end;
-	background-color: red;
-}
-.imagenHero {
-	width: 100%;
-	height: 100%;
-	object-fit: contain;
-}
-.confianza{
-	position: absolute;
-	top: 12%;
-	left: 50%;
-	transform: translateX(-50%);
-	color: white;
-	
+  .contenedorImagenHero {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: red;
+  }
+  .imagenHero {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .confianza {
+    position: absolute;
+    top: 12%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
 
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	align-items: center;
-	gap: 10px;
-}
-.confianza h3{
-	text-align: center;
-	margin: 0px;
-	font-size: 2.1rem;   /* ≈53.333px */
-  line-height: 1;  
-	font-family: "General Sans", sans-serif;
-	font-weight: 100;
-}
-.bebidas {
-	position: absolute;
-	bottom: 5%;
-	left: 50%;
-	transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+  }
+  .confianza h3 {
+    text-align: center;
+    margin: 0px;
+    font-size: 2.1rem; /* ≈53.333px */
+    line-height: 1;
+    font-family: "General Sans", sans-serif;
+    font-weight: 100;
+  }
+  .confianza .arrow {
+    font-size: 30px;
+    color: white;
+  }
+  .bebidas {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
 
-	width: 75%;
-	height: auto;
-}
+    width: 75%;
+    height: auto;
+  }
+  @media screen and (max-width: 1050px) {
+    .confianza h3 {
+      font-size: 1.3rem;
+    }
+    .confianza .arrow {
+      font-size: 20px;
+    }
+  }
+  @media screen and (max-width: 750px) {
+    .confianza {
+      top: 18%;
+    }
+    .confianza h3 {
+      font-size: 0.8rem;
+    }
+    .confianza .arrow {
+      font-size: 10px;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    .contenedorImagenHero {
+      height: 230px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+    }
+    .contenedorImagenHero .imagenHero {
+      background-color: #0032a1;
+      object-position: center bottom;
+    }
+  }
 </style>
-

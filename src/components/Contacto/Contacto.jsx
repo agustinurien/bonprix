@@ -1,24 +1,24 @@
 import "../Contacto/contacto.css";
+import emailjs from "@emailjs/browser";
 
 const Contacto = () => {
   const handlesubmit = (e) => {
     e.preventDefault();
 
     const form = e.target;
-    let sendEmail = "";
 
     const templateParams = {
-      from_name: form.name.value,
-      number: form.number.value,
-      from_email: form.email.value,
+      user_name: form.name.value,
+      user_number: form.number.value,
+      user_email: form.email.value,
       message: form.message.value,
-      to_email: sendEmail,
+      to_email: "agus.urien2@gmail.com",
       reply_to: form.email.value,
     };
 
-    const serviceID = "";
-    const templateID = "";
-    const publicKey = "";
+    const serviceID = "service_8u3gvod";
+    const templateID = "template_mjt7wjh";
+    const publicKey = "iPIMjwtA0QQid3Dtk";
 
     emailjs.send(serviceID, templateID, templateParams, publicKey).then(
       (result) => {
