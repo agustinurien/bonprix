@@ -1,6 +1,8 @@
 ---
+import { FaWhatsapp } from "react-icons/fa6";
 import Footer from "../components/LayoutComponent/Footer.astro";
 import Navbar from "../components/LayoutComponent/Navbar.astro";
+import Pedido from "../components/Contacto/Pedido.jsx";
 ---
 
 <!doctype html>
@@ -37,6 +39,7 @@ import Navbar from "../components/LayoutComponent/Navbar.astro";
     <Navbar />
     <slot />
     <Footer />
+    <Pedido client:load />
   </body>
 </html>
 

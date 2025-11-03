@@ -1,0 +1,96 @@
+.stickyWhatsapp {
+  position: fixed;
+  bottom: 9px;
+  right: 20px;
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+  border: solid 2px rgb(15, 179, 15);
+  color: black;
+  padding: 10px 20px;
+  border-radius: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.344);
+  font-family: "General Sans", sans-serif;
+  z-index: 1000;
+  cursor: pointer;
+
+  /* 🟢 Animación de salto realista */
+}
+
+.jumping {
+  animation: jumpHuman 2s infinite;
+}
+
+/* 🧍‍♂️ Simula el salto de una persona */
+@keyframes jumpHuman {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  10% {
+    transform: translateY(2px); /* ligera flexión antes del salto */
+  }
+  35% {
+    transform: translateY(-28px); /* punto más alto */
+    /* punto más alto */
+  }
+
+  50% {
+    transform: translateY(0); /* caída */
+  }
+  60% {
+    transform: translateY(-3px); /* pequeño rebote al aterrizar */
+  }
+  70% {
+    transform: translateY(0);
+  }
+}
+
+/* ⏸️ Se pausa cuando pasás el mouse */
+.stickyWhatsapp:hover {
+  animation-play-state: paused;
+}
+
+.stickyWhatsapp p {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: bold;
+  color: rgb(15, 179, 15);
+}
+
+.stickyWhatsapp .logoWpp {
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+  font-size: 1.5rem;
+  background-color: rgb(15, 179, 15);
+}
+
+a {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 750px) {
+  .stickyWhatsapp p {
+    font-size: 0.8rem;
+    line-height: 1.2;
+  }
+  .stickyWhatsapp .logoWpp {
+    width: 30px;
+    height: 30px;
+  }
+
+  .stickyWhatsapp {
+    position: fixed;
+    bottom: 9px;
+    right: 10px;
+    gap: 7px;
+    padding: 5px 10px;
+  }
+}
