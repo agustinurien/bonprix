@@ -61,7 +61,13 @@ import { FaTiktok } from "react-icons/fa6";
   </div>
   <div class="socialsContainer2">
     <div class="designedBy">
-      <p>Designed & developed by <strong> TAPE Producciones </strong></p>
+      <p>
+        Designed & developed by <strong>
+          <a href="https://www.tapeproducciones.com/" target="_blank"
+            >TAPE Producciones
+          </a></strong
+        >
+      </p>
       <div class="containerTape">
         <Image src={tapeLogo} alt="tapeLogo" class="imgTape" />
       </div>
@@ -293,6 +299,10 @@ import { FaTiktok } from "react-icons/fa6";
     color: #fff9ea;
     font-size: 1rem;
     font-weight: 700;
+  }
+  .designedBy strong a {
+    text-decoration: none;
+    color: #fff9ea;
   }
   .containerTape {
     display: flex;
