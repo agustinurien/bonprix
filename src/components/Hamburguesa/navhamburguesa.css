@@ -32,3 +32,24 @@
   font-weight: 700;
   font-size: 0.8rem;
 }
+.socials {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  height: 50px;
+
+  gap: 10px;
+  box-sizing: border-box;
+}
+.socials a {
+  text-decoration: none;
+  background-color: #ffffff;
+  width: 28px;
+  height: 28px;
+  font-size: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #0033a0;
+}

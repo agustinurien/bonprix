@@ -3,6 +3,7 @@ import Image from "astro/components/Image.astro";
 import logo from "../../assets/logo.png";
 import Countdown from "../Countdown/Countdown";
 import NavHamburguesa from "../Hamburguesa/NavHamburguesa";
+import { FaInstagram, FaLinkedinIn, FaTiktok } from "react-icons/fa6";
 ---
 
 <nav>
@@ -15,11 +16,28 @@ import NavHamburguesa from "../Hamburguesa/NavHamburguesa";
       <Image src={logo} alt="Logo" class="logo" />
     </div>
   </a>
-  <div class="links">
-    <a href="#Sucursales">SUCURSALES</a>
-    <a href="#Entregas">ZONAS DE ENTREGA</a>
-    <a href="#QuienesSomos">NOSOTROS</a>
-    <a href="#contacto">CONTACTO</a>
+  <div class="linksContainer">
+    <div class="links">
+      <a href="#Sucursales">SUCURSALES</a>
+      <a href="#Entregas">ZONAS DE ENTREGA</a>
+      <a href="#QuienesSomos">NOSOTROS</a>
+      <a href="#contacto">CONTACTO</a>
+    </div>
+    <div class="socials">
+      <a href="https://www.instagram.com/grupo.bonprix/" target="_blank"
+        ><FaInstagram /></a
+      >
+      <a
+        href="https://www.linkedin.com/company/grupo-bonprix/?originalSubdomain=ar"
+        target="_blank"
+        ><FaLinkedinIn />
+      </a>
+      <a
+        href="https://www.tiktok.com/@grupobonprix?_r=1&_t=ZM-91139ZdqeTr"
+        target="_blank"
+        ><FaTiktok />
+      </a>
+    </div>
   </div>
 </nav>
 
@@ -82,8 +100,41 @@ import NavHamburguesa from "../Hamburguesa/NavHamburguesa";
     height: 100%;
     object-fit: contain;
   }
+  .linksContainer {
+    display: flex;
+    align-items: center;
+  }
 
-  @media screen and (max-width: 650px) {
+  .socials {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    height: 100px;
+
+    padding-left: 24px;
+    gap: 10px;
+    box-sizing: border-box;
+  }
+  .socials a {
+    text-decoration: none;
+    background-color: #ffffff;
+    width: 28px;
+    height: 28px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #0033a0;
+  }
+
+  @media screen and (max-width: 1050px) {
+    nav {
+      padding: 0px 20px;
+    }
+  }
+
+  @media screen and (max-width: 750px) {
     nav .logoLink {
       width: fit-content;
       height: 100%;
@@ -114,8 +165,12 @@ import NavHamburguesa from "../Hamburguesa/NavHamburguesa";
       font-size: 0.6rem;
       margin: 0px;
     }
+    .socials {
+      gap: 5px;
+      padding-left: 10px;
+    }
   }
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 600px) {
     nav {
     }
     nav .links {
@@ -126,6 +181,9 @@ import NavHamburguesa from "../Hamburguesa/NavHamburguesa";
       display: block;
       top: 0;
       right: 0;
+    }
+    .socials {
+      display: none;
     }
   }
 </style>
