@@ -1,89 +1,89 @@
 ---
-import construccion from '../../src/assets/construccion.png';
+import construccion from "../../src/assets/construccion.png";
 import { FaLinkedin } from "react-icons/fa6";
 import { FaSquareInstagram } from "react-icons/fa6";
-import ProductsLists from './ProductsLists';
+import ProductsLists from "./ProductsLists";
 ---
+
 <main>
-	<div class="prueba">
-		<ProductsLists client:load/>
-	</div>
-	<div class="construccion">
-		<img src={construccion.src} alt="Construcción" />
-		<div class="socials">
-			<a href="https://www.linkedin.com/company/104602475/admin/dashboard/" target="_blank"><FaLinkedin /></a>
-			<a href="https://www.instagram.com/grupo.bonprix/" target="_blank"><FaSquareInstagram /></a>
-		</div>
-	</div>
+  <div class="prueba">
+    <ProductsLists client:load />
+  </div>
+  <div class="construccion">
+    <img src={construccion.src} alt="Construcción" />
+    <div class="socials">
+      <a
+        href="https://www.linkedin.com/company/104602475/admin/dashboard/"
+        target="_blank"><FaLinkedin /></a
+      >
+      <a href="https://www.instagram.com/grupo.bonprix/" target="_blank"
+        ><FaSquareInstagram /></a
+      >
+    </div>
+  </div>
 </main>
 
 <style>
-	.prueba {
-		background-color: red;
-		height: fit-content;
-		width: 90%;
-	}
-	.construccion {
-		position: relative;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		height: fit-content;
-		display: none;
-	}
-	img {
-		
-		width: 100%;
-		height: auto;
-		object-fit: contain;
-	}
-	.socials {
-		
-		position: absolute;
-		top: 75%;
-		left: 0;
+  .prueba {
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+    width: 100%;
+    background-color: black;
+  }
+  .construccion {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    display: none;
+  }
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+  .socials {
+    position: absolute;
+    top: 75%;
+    left: 0;
 
-		transform: translate(0, -50%);
-		height: fit-content;
-		width: 100%;
+    transform: translate(0, -50%);
+    height: fit-content;
+    width: 100%;
 
-		font-family: Arial, sans-serif;
-		font-size: 14px;
-		color: #333;
-		
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		gap: 20px;
-	}
-	a {
-		color: rgba(255, 255, 255, 0.726);
-		text-decoration: none;
-		font-size: 50px;
-	}
-	a :hover {
-		color: #ffffff;
-	}
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #333;
 
-	@media screen and (max-width: 1080px) {
-		a {
-		font-size: 30px;
-	}
-		
-	}
-	@media screen and (max-width: 600px) {
-		a {
-		font-size: 20px;
-		
-	}
-		
-	}
-	@media screen and (max-width: 390px) {
-		a {
-		font-size: 10px;
-		
-	}
-		
-	}
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  a {
+    color: rgba(255, 255, 255, 0.726);
+    text-decoration: none;
+    font-size: 50px;
+  }
+  a :hover {
+    color: #ffffff;
+  }
+
+  @media screen and (max-width: 1080px) {
+    a {
+      font-size: 30px;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    a {
+      font-size: 20px;
+    }
+  }
+  @media screen and (max-width: 390px) {
+    a {
+      font-size: 10px;
+    }
+  }
 </style>
-
