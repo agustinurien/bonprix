@@ -17,7 +17,7 @@ const Pedido = () => {
 
   return (
     <a
-      href="https://wa.me/5491164610799"
+      href="https://wa.me/5491164718664"
       target="_blank"
       className={`stickyWhatsapp ${isJumping ? "jumping" : ""}`}
     >
