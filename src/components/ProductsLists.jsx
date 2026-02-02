@@ -4,10 +4,15 @@ import { searchProducts } from "../utils/articulosApi";
 import Skeleton from "@mui/material/Skeleton";
 import "./productList.css";
 
+import { useCartStore } from "../store/useCartStore";
+
 const ProductsLists = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(false);
   const [totalToLoad, setTotalToLoad] = useState(0);
+
+  const addToCart = useCartStore((state) => state.addToCart);
+
   // número mínimo de skeletons a mostrar mientras se carga
   const MIN_SKELETONS = 3;
   // intervalo de flush (ms). Reducir para que los items aparezcan más rápido
@@ -139,6 +144,7 @@ const ProductsLists = () => {
       <p>
         <strong>Stock:</strong> {p.stock}
       </p>
+      <button onClick={() => addToCart(p)}>ADD TO CART</button>
     </div>
   ));
 

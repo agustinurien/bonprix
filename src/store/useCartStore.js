@@ -7,13 +7,15 @@ export const useCartStore = create(
       cart: [],
 
       addToCart: (product) => {
+        console.log("Agregando al carrito:", product);
+
         const cart = get().cart;
-        const existing = cart.find((item) => item.sku === product.sku);
+        const existing = cart.find((item) => item.codigo === product.codigo);
 
         let updatedCart;
         if (existing) {
           updatedCart = cart.map((item) =>
-            item.sku === product.sku
+            item.codigo === product.codigo
               ? { ...item, quantity: item.quantity + 1 }
               : item
           );
@@ -24,27 +26,27 @@ export const useCartStore = create(
         set({ cart: updatedCart });
       },
 
-      removeFromCart: (sku) => {
-        const updatedCart = get().cart.filter((item) => item.sku !== sku);
+      removeFromCart: (codigo) => {
+        const updatedCart = get().cart.filter((item) => item.codigo !== codigo);
         set({ cart: updatedCart });
       },
 
       clearCart: () => set({ cart: [] }),
 
-      updateQuantity: (sku, quantity) => {
+      updateQuantity: (codigo, quantity) => {
         const updatedCart = get().cart.map((item) =>
-          item.sku === sku ? { ...item, quantity } : item
+          item.codigo === codigo ? { ...item, quantity } : item
         );
         set({ cart: updatedCart });
       },
 
       total: () =>
         get()
-          .cart.reduce((acc, item) => acc + item.price * item.quantity, 0)
+          .cart.reduce((acc, item) => acc + item.precioVenta * item.quantity, 0)
           .toFixed(2),
     }),
     {
-      name: "cart-storage", // clave en localStorage
+      name: "cart-storage",
     }
   )
 );

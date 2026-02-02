@@ -1,11 +1,21 @@
 import React from "react";
 import { useCartStore } from "../store/useCartStore";
-import { handleCheckout } from "../utils/checkout";
+
 import { auth } from "../firebase/config";
 
 const Cart = () => {
   const { cart, removeFromCart, clearCart, updateQuantity, total } =
     useCartStore();
+
+  const checkStock = () => {
+    console.log("Checkear stock por cada producto");
+    allowed = checkStockForAllProducts(); // comprobar en el back end, llamar a utils/api y dentro llamar la api por cada codigo de producto
+    if (allowed) {
+      handleCheckoutClick();
+    } else {
+      alert("Algunos productos en tu carrito no tienen stock suficiente.");
+    }
+  };
 
   const handleCheckoutClick = () => {
     const user = auth.currentUser;
@@ -16,7 +26,6 @@ const Cart = () => {
     }
 
     // Si está logueado, procede con el checkout
-    handleCheckout();
   };
 
   return (
@@ -29,31 +38,40 @@ const Cart = () => {
           <>
             {cart.map((item) => (
               <div
-                key={item.sku}
+                key={item.codigo}
                 className="flex justify-between items-center border-b py-2"
               >
                 <div>
-                  <p className="font-semibold">{item.name}</p>
-                  <p className="text-sm text-gray-500">${item.price}</p>
+                  <p className="font-semibold">{item.descripcion}</p>
+                  <p className="text-sm text-gray-500">${item.precioVenta}</p>
                 </div>
 
                 <div className="flex items-center gap-2">
                   <button
                     onClick={() =>
-                      updateQuantity(item.sku, Math.max(item.quantity - 1, 1))
+                      updateQuantity(
+                        item.codigo,
+                        Math.max(item.quantity - 1, 1)
+                      )
                     }
                   >
                     -
                   </button>
                   <span>{item.quantity}</span>
                   <button
-                    onClick={() => updateQuantity(item.sku, item.quantity + 1)}
+                    disabled={() => item.quantity >= item.stock}
+                    onClick={() =>
+                      updateQuantity(
+                        item.codigo,
+                        Math.max(item.quantity + 1, 1)
+                      )
+                    }
                   >
                     +
                   </button>
 
                   <button
-                    onClick={() => removeFromCart(item.sku)}
+                    onClick={() => removeFromCart(item.codigo)}
                     className="text-red-500 ml-3"
                   >
                     🗑️
@@ -64,7 +82,7 @@ const Cart = () => {
 
             <div className="mt-4 font-bold">Total: ${total()}</div>
 
-            <button onClick={handleCheckoutClick} style={{ marginTop: 20 }}>
+            <button onClick={checkStock} style={{ marginTop: 20 }}>
               Finalizar Compra
             </button>
 

@@ -57,3 +57,5 @@ export const searchProducts = async (busqueda, onChunk, { signal } = {}) => {
     throw err;
   }
 };
+
+export const checkStockForAllProducts = async (codigos) => {};
